@@ -13,5 +13,10 @@ class EmailParser
   def parse
     @list_of_emails = @string.split(" ")
     @list_of_emails = @list_of_emails.collect {|email| email.chomp(",")}
+    unique_array = []
+    @list_of_emails.each do |email|
+      unique_array << email if !unique_array.include?(email)
+    end
+    unique_array
   end
 end
