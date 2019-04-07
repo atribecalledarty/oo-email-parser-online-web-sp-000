@@ -12,6 +12,6 @@ class EmailParser
   
   def parse
     @list_of_emails = @string.split(" ")
-    @list_of_emails = @list_of_emails.each {|email| email.chomp(",")}
+    @list_of_emails = @list_of_emails.collect {|email| email.chomp(",")}
   end
 end
