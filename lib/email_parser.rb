@@ -10,4 +10,8 @@ class EmailParser
     @list_of_emails = @list_of_emails.each {|email| email.chomp(",")}
     
   end
+  
+  def parse
+    @list_of_emails 
+  end
 end
